@@ -1,4 +1,5 @@
-
+import random
+from ctypes import string_at
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
@@ -9,12 +10,11 @@ class my_grid(GridLayout):
     def __init__(self, **kwargs):
         super(my_grid, self).__init__(**kwargs)
         self.cols = 1 
-        
-        
         self.inside = GridLayout()
         self.inside.cols = 2
-        self.string1 = "vbhjvbajbndf"
-        self.inside.add_widget(Label(text=string1))
+        self.string1 = "vbhjvba"
+        self.label1 = Label()
+        self.inside.add_widget(self.label1)
         self.name = TextInput()
         self.inside.add_widget(self.name)
               
@@ -26,8 +26,16 @@ class my_grid(GridLayout):
         self.add_widget(self.sumbit)
         
     def pressed(self, instance):
-        print("pressed")
-        
+        self.number = random.randint(0,5)       
+        text = self.name.text
+        print(text)
+        self.name.text = ""
+        self.label1.text = str(self.number)
+    
+    def changelabel(self, instance):
+        self.string1 = "hello"
+        self.label1 = self.label1
+           
         
         
 class MyApp(App):
