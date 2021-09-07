@@ -5,8 +5,12 @@ from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
+from kivy.uix.widget import Widget
 
-class my_grid(GridLayout):
+
+class my_grid(Widget):
+    pass
+    '''
     def __init__(self, **kwargs):
         super(my_grid, self).__init__(**kwargs)
         self.cols = 1 
@@ -35,7 +39,7 @@ class my_grid(GridLayout):
     def changelabel(self, instance):
         self.string1 = "hello"
         self.label1 = self.label1
-           
+     '''      
         
         
 class MyApp(App):
