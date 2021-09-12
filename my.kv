@@ -1,17 +1,39 @@
 <my_grid>
+    nocal: nocal
+    socal: socal
+    choice: choice
+    score: score
+
+
     GridLayout:
         cols:1
-        size: root.width, root.height
+        size: root.width -200, root.height -200
+        pos: 100, 100
 
+        Label:
+            id:score
+            text: "score: "
+
+        Label:
+            id:choice
+            text: "jhJHBWDHB"
 
         GridLayout:
-            cols: 2
+            cols: 6
 
-            Label:
-                text: "jhahjbfg"
-            
-            TextInput:
-
-        Button:
-            text: "button"
+            Button:
+                id: nocal
+                text: "nocal"
+                on_press:root.btn()
+            Button:
+                id: socal
+                text: "socal"
+            Button:
+                text: "button3"
+            Button:
+                text: "button4"
+            Button:
+                text: "button5"
+            Button:
+                text: "button6"
 
