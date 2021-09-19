@@ -1,39 +1,61 @@
 <my_grid>
     nocal: nocal
     socal: socal
-    choice: choice
-    score: score
+    desert: desert
+    vancouver: vancouver
+    seattle: seattle
+    other: other
+    start: start
+    choicelabel: choicelabel
+    scorelabel: scorelabel
+    message: message
 
 
     GridLayout:
         cols:1
         size: root.width -200, root.height -200
         pos: 100, 100
+        Label:
+            id:message
+            text: ""
+            
+        Label:
+            id:scorelabel
+            text: ""
 
         Label:
-            id:score
-            text: "score: "
-
-        Label:
-            id:choice
-            text: "jhJHBWDHB"
+            id:choicelabel
+            text: ""
 
         GridLayout:
-            cols: 6
+            cols: 7
 
             Button:
                 id: nocal
                 text: "nocal"
-                on_press:root.btn()
+                on_press:root.NOCALCHECK()
             Button:
                 id: socal
                 text: "socal"
+                on_press:root.SOCALCHECK()
             Button:
-                text: "button3"
+                id: desert
+                text: "desert"
+                on_press:root.DESERTCHECK()
             Button:
-                text: "button4"
+                id: start
+                text: "start"
+                on_press:root.btn()
             Button:
-                text: "button5"
+                id: vancouver
+                text: "vancouver"
+                on_press:root.VANCOUVERCHECK()
             Button:
-                text: "button6"
+                id: seattle
+                text: "seattle"
+                on_press:root.SEATTLECHECK()
+            Button:
+                id: other
+                text: "other"
+                on_press:root.OTHERCHECK()
 
