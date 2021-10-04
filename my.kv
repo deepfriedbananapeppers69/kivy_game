@@ -5,7 +5,7 @@
     vancouver: vancouver
     seattle: seattle
     other: other
-    start: start
+    lifelabel: lifelabel 
     choicelabel: choicelabel
     scorelabel: scorelabel
     message: message
@@ -13,8 +13,10 @@
 
     GridLayout:
         cols:1
-        size: root.width -200, root.height -200
-        pos: 100, 100
+        Label:
+            id:lifelabel
+            text: ""
+
         Label:
             id:message
             text: ""
@@ -41,11 +43,7 @@
             Button:
                 id: desert
                 text: "desert"
-                on_press:root.DESERTCHECK()
-            Button:
-                id: start
-                text: "start"
-                on_press:root.btn()
+                on_press:root.DESERTCHECK()  
             Button:
                 id: vancouver
                 text: "vancouver"
@@ -59,3 +57,28 @@
                 text: "other"
                 on_press:root.OTHERCHECK()
 
+<pong>
+    start: start
+    
+    GridLayout:
+        
+
+        cols:1
+
+        Label: 
+            text: "Hello To The Game"
+        Label:
+            text: "To Start The Game Click The Start Button"
+
+        GridLayout:
+            cols: 3
+
+            Button:
+                id: start 
+                text: "start"
+            
+                on_press:
+                    root.manager.current = 'pm_game'
+                    root.btn()
+                    
+                          
