@@ -1,0 +1,189 @@
+<start_menu>
+    nametext: nametext
+
+    GridLayout:
+
+        
+        cols:1
+
+        Label:
+            text: "enter you name"
+
+
+        TextInput:
+            id: nametext
+            text: ""
+        
+        Button:
+            text: "submit"
+            
+            on_press:
+                root.submit()
+                root.manager.current = 'main'
+
+<pm_grid>
+    nocal: nocal
+    socal: socal
+    desert: desert
+    vancouver: vancouver
+    seattle: seattle
+    other: other
+    lifelabel: lifelabel 
+    choicelabel: choicelabel
+    scorelabel: scorelabel
+    message: message
+    namevar: namevar 
+
+
+    GridLayout:
+        cols:1
+        Label:
+            id:namevar
+            text: ""
+
+        Label:
+            id:lifelabel
+            text: ""
+
+        Label:
+            id:message
+            text: ""
+            
+        Label:
+            id:scorelabel
+            text: ""
+
+        Label:
+            id:choicelabel
+            text: ""
+
+        GridLayout:
+            cols: 8
+
+            Button:
+                id: nocal
+                text: "nocal"
+                on_press:root.NOCALCHECK()
+            Button:
+                id: socal
+                text: "socal"
+                on_press:root.SOCALCHECK()
+            Button:
+                id: desert
+                text: "desert"
+                on_press:root.DESERTCHECK()
+            Button:
+                text: "Return to menu"
+                on_press:
+                    root.manager.current = "main"
+            Button:
+                id: vancouver
+                text: "vancouver"
+                on_press:root.VANCOUVERCHECK()
+            Button:
+                id: seattle
+                text: "seattle"
+                on_press:root.SEATTLECHECK()
+            Button:
+                id: other
+                text: "other"
+                on_press:root.OTHERCHECK()
+
+<am_grid>
+    greenbelt: greenbelt
+    bluebelt: bluebelt
+    redbelt: redbelt
+    yellowbelt: yellowbelt 
+    blowby: blowby
+    other: other
+    lifelabel: lifelabel 
+    choicelabel: choicelabel
+    scorelabel: scorelabel
+    message: message
+    namevar: namevar 
+
+
+    GridLayout:
+        cols:1
+        Label:
+            id:namevar
+            text: ""
+
+        Label:
+            id:lifelabel
+            text: ""
+
+        Label:
+            id:message
+            text: ""
+            
+        Label:
+            id:scorelabel
+            text: ""
+
+        Label:
+            id:choicelabel
+            text: ""
+
+        GridLayout:
+            cols: 8
+
+            Button:
+                id: greenbelt
+                text: "greenbelt"
+                on_press:root.GREENBELTCHECK()
+            Button:
+                id: bluebelt
+                text: "bluebelt"
+                on_press:root.BLUEBELTCHECK()
+            Button:
+                id: redbelt
+                text: "redbelt"
+                on_press:root.REDBELTCHECK()
+            Button:
+                text: "Return to menu"
+                on_press:
+                    root.manager.current = "main"
+            Button:
+                id: yellowbelt
+                text: "yellow"
+                on_press:root.YELLOWBELTCHECK()
+            Button:
+                id: blowby
+                text: "blowby"
+                on_press:root.BLOWBYCHECK()
+            Button:
+                id: other
+                text: "other"
+                on_press:root.OTHERCHECK()
+
+<menu>
+    GridLayout:
+        
+        cols:1
+
+        Label: 
+            text: "Hello To The Game"
+        Label:
+            text: "To Start The Game Click The Start Button"
+
+        GridLayout:
+            cols: 4
+
+            Button:
+                text: "pmgame"
+                on_press:
+                    root.manager.current = 'pm_game'
+                    root.btn()
+            Button:
+                text: "signout"
+                on_press:
+                    root.manager.current = 'getname'
+            
+            Button:
+                text: "amgame"
+                on_press:
+                    root.manager.current = 'am_game'
+                    root.btn()
+            
+
